@@ -21,7 +21,7 @@ public class RMIServer implements RMIInterface {
             RMIInterface stub = (RMIInterface) UnicastRemoteObject.exportObject((Remote) obj, 0);
             LocateRegistry.createRegistry(8412);
             Registry registry = LocateRegistry.getRegistry();
-            registry.bind("rmi://10.179.86.132:1099/Hello", stub);
+            registry.bind("Hello", stub);
             System.out.println("Server Start!");
             Thread.sleep(1000*100000);
         } catch (Exception e) {
