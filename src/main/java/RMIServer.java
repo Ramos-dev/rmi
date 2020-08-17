@@ -17,8 +17,11 @@ public class RMIServer implements RMIInterface {
 //            System.setProperty("sun.rmi.registry.registryFilter", "java.util.HashMap;");
 //            System.setProperty("sun.rmi.registry.registryFilter", "java.util.HashMap;sun.reflect.annotation.**;");
 //            System.setProperty("sun.rmi.registry.registryFilter", "java.**;sun.reflect.annotation.**;com.sun.**");
+            System.setProperty("java.rmi.server.hostname", "10.179.86.132");
+
             RMIServer obj = new RMIServer();
             RMIInterface stub = (RMIInterface) UnicastRemoteObject.exportObject((Remote) obj, 0);
+
             LocateRegistry.createRegistry(8412);
             Registry registry = LocateRegistry.getRegistry();
             registry.rebind("Hello", stub);
