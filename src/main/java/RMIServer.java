@@ -19,7 +19,7 @@ public class RMIServer implements RMIInterface {
 //            System.setProperty("sun.rmi.registry.registryFilter", "java.**;sun.reflect.annotation.**;com.sun.**");
             RMIServer obj = new RMIServer();
             RMIInterface stub = (RMIInterface) UnicastRemoteObject.exportObject((Remote) obj, 0);
-            LocateRegistry.createRegistry(1099);
+            LocateRegistry.createRegistry(8412);
             Registry registry = LocateRegistry.getRegistry();
             registry.bind("Hello", stub);
             System.out.println("Server Start!");
@@ -39,7 +39,7 @@ public class RMIServer implements RMIInterface {
 //            System.setProperty("sun.rmi.registry.registryFilter", "java.**;sun.reflect.annotation.**;com.sun.**");
             RMIServer obj = new RMIServer();
             RMIInterface stub = (RMIInterface) UnicastRemoteObject.exportObject((Remote) obj, 0);
-            LocateRegistry.createRegistry(1099);
+            LocateRegistry.createRegistry(8412);
             Registry registry = LocateRegistry.getRegistry();
             registry.bind("Hello", stub);
             System.out.println("Server Start!");
